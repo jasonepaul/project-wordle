@@ -1,6 +1,7 @@
 import React from 'react';
 
-function Input({ handleSubmitWord }) {
+function Input({ handleSubmitWord, gameStatus }) {
+  console.log('status: ' + gameStatus);
   const [tentativeGuess, setTentativeGuess] = React.useState('');
 
   function handleSubmit(event) {
@@ -22,6 +23,7 @@ function Input({ handleSubmitWord }) {
           setTentativeGuess(event.target.value.toUpperCase())
         }
         required
+        disabled={gameStatus !== 'inProgress'}
       />
     </form>
   );
