@@ -14,8 +14,7 @@ function Game() {
   const [wordList, setWordList] = React.useState([]);
 
   function handleSubmitWord(tentativeGuess) {
-    const nextWord = { word: tentativeGuess, id: crypto.randomUUID() };
-    const nextWordList = [...wordList, nextWord];
+    const nextWordList = [...wordList, tentativeGuess];
     setWordList(nextWordList);
   }
 

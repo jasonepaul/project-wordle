@@ -5,7 +5,6 @@ function Input({ handleSubmitWord }) {
 
   function handleSubmit(event) {
     event.preventDefault();
-    console.log({ tentativeGuess });
     handleSubmitWord(tentativeGuess);
     setTentativeGuess('');
   }
